@@ -1,0 +1,42 @@
+<div class="header d-md-block d-none">
+    <!-- <div class="text-center" style="margin-right: 10px;">
+        <img src="assets/images/svg_Icons/left-arrow.svg" (click)="back()">
+    </div> -->
+    <!-- <img src="assets/images/logos/Jusbid_logo.png" routerLink="/" alt=""> -->
+</div>
+
+<section class="auth_page"
+    style="background-image: url(assets/images/login_bg.jpg);background-position: bottom center; background-repeat: no-repeat; background-size: contain;">
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12 mx-md-auto col-md-8 col-xl-4">
+                <div class="form_card">
+                    <h5 class="auth_form_title mb-4">Welcome Back!</h5>
+                    <form autocomplete="off">
+                        <div class="form-group mb-4">
+                            <!-- <label for="email">E-mail </label> -->
+                            <input type="text" class="form-control" autocomplete="off" id="email"
+                                name="user" ngModel required placeholder="Email Id">
+                        </div>
+                        <div class="form-group">
+                            <!-- <label for="password">Password</label> -->
+                            <input [type]="hidePassword ? 'password': 'text'"
+                                class="form-control passowrd-input" autocomplete="off" id="password"
+                                name="password" ngModel required placeholder="Password">
+                            <span class="icon" (click)="showPassword()" *ngIf="hidePassword">
+                                <!-- <img class="eye_pass" src="assets/images/icons/show_passowrd.png"
+                                            alt="Show Password"> -->
+                            </span>
+                            <span class="icon" (click)="showPassword()" *ngIf="!hidePassword">
+                                <!-- <img class="eye_pass" src="assets/images/icons/hide_passowrd.png"
+                                            alt="Show Password"> -->
+                            </span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

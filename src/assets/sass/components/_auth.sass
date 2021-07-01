@@ -1,0 +1,112 @@
+.auth_form_title 
+    font-size: 32px
+    line-height: 1.2
+    font-weight: 700
+    color: #000
+.header 
+    width: 100%
+    display: flex
+    align-items: center
+    padding: 20px 0 0 100px
+    background: transparent
+    position: fixed
+    z-index: 9999
+    top: 0
+    img 
+        width: 120px
+        outline: none
+        cursor: pointer
+    
+.auth_page 
+    width: 100%
+    height: 100vh
+    position: relative
+    display: grid
+    align-items: center
+    z-index: 999
+    overflow: hidden
+
+    .form_card
+        position: relative
+        background: transparent
+        padding: 36px 40px
+        width: 100%
+        height: 100%
+        border-radius: 10px
+        overflow: hidden
+        background-color: #fff
+        
+        hr 
+            border-color: #aababb
+        
+        .glass-login 
+            position: relative
+            z-index: 2
+            background: transparent
+            a 
+                cursor: pointer
+                color: #000          
+    // .form-control
+
+.form-group 
+    position: relative
+
+.passowrd-input 
+    position: relative
+
+.icon 
+    position: absolute
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    img 
+        width: 30px
+    
+
+@media (max-width: 1540px) 
+    .auth_page 
+        .gap 
+            padding: 0px 15px
+        
+    
+
+@media (max-width: 767px) 
+    .auth_page 
+        background: #fff
+        min-height: 100vh
+        .form_card 
+            padding: 0px
+            border-radius: 0
+            &::after 
+                display: none
+            
+            button 
+                margin: auto
+                display: block
+    
+    .header 
+        display: block
+        padding-left: 0
+        text-align: center
+        position: relative
+        padding-top: 30px
+        img 
+            width: 100px
+        
+    
+    .auth_form_title 
+        font-size: 24px
+    .icon img
+        width: 25px
+    
+    
+
+@media (max-width:414px)
+    .usersignup 
+        position: fixed
+        bottom: 10px
+        width: 100%
+        left: 0
+        right: 0
+    
+
