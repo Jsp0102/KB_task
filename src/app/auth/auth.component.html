@@ -6,24 +6,26 @@
 </div>
 
 <section class="auth_page"
-    style="background-image: url(assets/images/login_bg.jpg);background-position: bottom center; background-repeat: no-repeat; background-size: contain;">
+    style="background-image: url(assets/images/login_bg.jpg);background-position:center right; background-repeat: no-repeat; background-size: contain;">
     <div class="container-fluid">
 
         <div class="row">
-            <div class="col-12 mx-md-auto col-md-8 col-xl-4">
+            <div class="col-xl-1 ">
+            </div>
+            <div class="col-12 col-md-8 col-xl-3 ">
                 <div class="form_card">
-                    <h5 class="auth_form_title mb-4">Welcome Back!</h5>
+                    <h5 class="auth_form_title mb-5">Welcome Back!</h5>
                     <form autocomplete="off">
                         <div class="form-group mb-4">
                             <!-- <label for="email">E-mail </label> -->
-                            <input type="text" class="form-control" autocomplete="off" id="email"
-                                name="user" ngModel required placeholder="Email Id">
+                            <input type="text" class="form-control" autocomplete="off" id="email" name="user" ngModel
+                                required placeholder="Email Id">
                         </div>
                         <div class="form-group">
                             <!-- <label for="password">Password</label> -->
-                            <input [type]="hidePassword ? 'password': 'text'"
-                                class="form-control passowrd-input" autocomplete="off" id="password"
-                                name="password" ngModel required placeholder="Password">
+                            <input [type]="hidePassword ? 'password': 'text'" class="form-control passowrd-input"
+                                autocomplete="off" id="password" name="password" ngModel required
+                                placeholder="Password">
                             <span class="icon" (click)="showPassword()" *ngIf="hidePassword">
                                 <!-- <img class="eye_pass" src="assets/images/icons/show_passowrd.png"
                                             alt="Show Password"> -->
