@@ -1,0 +1,87 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar">
+    <ul class="nav">
+        <li class="nav-item" [ngClass]="{ 'active': dashboard.isActive }">
+            <a class="nav-link" routerLink="/erp" routerLinkActive #dashboard="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                <span class="menu-title">Dashboard</span>
+                <i class="mdi mdi-home menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': BankSlipCreate.isActive || ChequeCreate.isActive || ChallanCreate.isActive ||BankCreate.isActive }">
+            <a class="nav-link" (click)="uiBasicCollapsed = !uiBasicCollapsed" [attr.aria-expanded]="uiBasicCollapsed" aria-controls="bank">
+                <span class="menu-title">Bank</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-credit-card-multiple menu-icon"></i>
+            </a>
+            <div class="collapse" id="bank" [ngbCollapse]="!uiBasicCollapsed">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" routerLink="bank" routerLinkActive #BankCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                Bank Slip</a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="bank/receipt" routerLinkActive #BankSlipCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Receipt </a></li>
+
+                    <li class="nav-item"> <a class="nav-link" routerLink="bank/payment" routerLinkActive #ChallanCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Payment </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="bank/cheque" routerLinkActive #ChequeCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Cheque Book </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="balance-sheet" routerLinkActive #ChallanCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Balance Sheet </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="bank/challan" routerLinkActive #ChallanCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> JV </a></li>
+
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': createForm.isActive }">
+            <a class="nav-link" routerLink="master-create" routerLinkActive #createForm="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                <span class="menu-title">Master Create</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': HotelPaymentCreate.isActive || TravelPaymentCreate.isActive}">
+            <a class="nav-link" (click)="samplePagesCollapsed = !samplePagesCollapsed" [attr.aria-expanded]="samplePagesCollapsed" aria-controls="auth">
+                <span class="menu-title">Payment</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-credit-card-multiple menu-icon"></i>
+            </a>
+            <div class="collapse" id="auth" [ngbCollapse]="!samplePagesCollapsed">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" routerLink="payment/hotel" routerLinkActive #HotelPaymentCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Hotel </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="payment/travel" routerLinkActive #TravelPaymentCreate="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Travel Agent </a></li>
+                </ul>
+            </div>
+        </li>
+        <li class="nav-item" [ngClass]="{ 'active': listing.isActive || this.id }">
+            <a class="nav-link" routerLink="hotel-listing" routerLinkActive #listing="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                <span class="menu-title">Hotels Listing</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+        </li>
+
+        <li class="nav-item" [ngClass]="{ 'active': account.isActive }">
+            <a class="nav-link" routerLink="account" routerLinkActive #account="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                <span class="menu-title">Accounts Listing</span>
+                <i class="mdi mdi-account-check menu-icon"></i>
+            </a>
+        </li>
+
+
+        <li class="nav-item" [ngClass]="{ 'active': expenditure.isActive }">
+            <a class="nav-link" routerLink="expense" routerLinkActive #expenditure="routerLinkActive" [routerLinkActiveOptions]="{exact: true}">
+                <span class="menu-title">Expenditure</span>
+                <i class="mdi mdi-format-list-bulleted menu-icon"></i>
+            </a>
+        </li>
+
+        <li class="nav-item" [ngClass]="{ 'active': CreateGroupsLedgers.isActive || GroupSelection.isActive || LedgerAlterations.isActive }">
+            <a class="nav-link" (click)="erpPagesCollapsed = !erpPagesCollapsed" [attr.aria-expanded]="erpPagesCollapsed" aria-controls="bank">
+                <span class="menu-title">Erp</span>
+                <i class="menu-arrow"></i>
+                <i class="mdi mdi-credit-card-multiple menu-icon"></i>
+            </a>
+            <div class="collapse" id="bank" [ngbCollapse]="!erpPagesCollapsed">
+                <ul class="nav flex-column sub-menu">
+                    <li class="nav-item"> <a class="nav-link" routerLink="erp" routerLinkActive #CreateGroupsLedgers="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Create Groups Ledgers
+              </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="erp/select-group" routerLinkActive #GroupSelection="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Group Selection </a></li>
+                    <li class="nav-item"> <a class="nav-link" routerLink="erp/ledger-alterations" routerLinkActive #LedgerAlterations="routerLinkActive" [routerLinkActiveOptions]="{exact: true}"> Ledger Alterations</a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+</nav>

@@ -2,11 +2,10 @@
     <!-- <div class="text-center" style="margin-right: 10px;">
         <img src="assets/images/svg_Icons/left-arrow.svg" (click)="back()">
     </div> -->
-    <!-- <img src="assets/images/logos/Jusbid_logo.png" routerLink="/" alt=""> -->
+    <!-- <h1>HMA</h1> -->
 </div>
 
-<section class="auth_page"
-    style="background-image: url(assets/images/login_bg.jpg);background-position:center right; background-repeat: no-repeat; background-size: contain;">
+<section class="auth_page" style="background-image: url(assets/images/login_bg.jpg);background-position:center right; background-repeat: no-repeat; background-size: contain;">
     <div class="container-fluid">
 
         <div class="row">
@@ -15,17 +14,14 @@
             <div class="col-12 col-md-8 col-xl-3 ">
                 <div class="form_card">
                     <h5 class="auth_form_title mb-5">Welcome Back!</h5>
-                    <form autocomplete="off">
+                    <form #loginForm="ngForm" autocomplete="off" (submit)="onSubmit(loginForm)">
                         <div class="form-group mb-4">
                             <!-- <label for="email">E-mail </label> -->
-                            <input type="text" class="form-control" autocomplete="off" id="email" name="user" ngModel
-                                required placeholder="Email Id">
+                            <input type="text" class="form-control" autocomplete="off" id="email" name="user" ngModel required placeholder="Email Id" ngModel>
                         </div>
                         <div class="form-group">
                             <!-- <label for="password">Password</label> -->
-                            <input [type]="hidePassword ? 'password': 'text'" class="form-control passowrd-input"
-                                autocomplete="off" id="password" name="password" ngModel required
-                                placeholder="Password">
+                            <input [type]="hidePassword ? 'password': 'text'" class="form-control passowrd-input" autocomplete="off" id="password" name="password" ngModel required placeholder="Password">
                             <span class="icon" (click)="showPassword()" *ngIf="hidePassword">
                                 <!-- <img class="eye_pass" src="assets/images/icons/show_passowrd.png"
                                             alt="Show Password"> -->
@@ -35,7 +31,10 @@
                                             alt="Show Password"> -->
                             </span>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
+                        <a class="text-end d-block pt-2"><i>Forgot Password?</i></a>
+                        <div class="text-center mt-5">
+                            <button type="submit" class="btn btn-primary btn-block mt-3 py-2 px-4">Login</button>
+                        </div>
                     </form>
                 </div>
             </div>
