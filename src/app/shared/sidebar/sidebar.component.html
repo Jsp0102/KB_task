@@ -1,0 +1,19 @@
+<div class="inner-dashboard">
+    <div class="inner-dashboard-logo">
+        <!-- <img [src]="profile_img_path" alt=""> -->
+        <img src="assets/images/logo.png" alt="" class="admin-logo"> 
+    </div>
+    <div class="inner-dashboard-list">
+        <ul>
+            <li>
+
+            </li>
+            <li *ngFor="let menu of sidebarmenus">
+                <a [routerLink]="menu.route"  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact: true}">
+                    <i class="fa {{ menu.icon }}"></i>  <h6>{{ menu.title }}</h6> 
+                </a>
+            </li>
+        </ul>
+    </div>
+    
+</div>

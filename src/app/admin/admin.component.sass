@@ -1,0 +1,547 @@
+@import '../../styles'
+.main-container
+    position: relative
+    margin: 0
+    background: #f9fbfd
+    min-height: 100vh
+    .main-wrapper
+        display: flex
+        .admin-sidebar
+            width: 130px
+            background: $primary
+            position: fixed
+            left: 0
+            top: 0
+            bottom: 0
+            box-shadow: 1px 0 20px 0 rgba(69, 90, 100, 0.8%)            
+            overflow-y: scroll
+            &::-webkit-scrollbar 
+                width: 8px
+                margin-top: 77px
+                // display: none
+            
+            
+            
+            &::-webkit-scrollbar-track 
+                display: none
+                box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+                // border-radius: 10px
+                background-color: #F5F5F5
+            
+            
+            &::-webkit-scrollbar-thumb 
+                background-color: darkgrey
+                border-radius: 10px
+                width: 8px
+                display: block
+            
+        
+        .admin-main
+            width: calc(100% - 130px)
+            margin-left: 130px
+            // background: #f4f3ef
+
+        
+    
+
+
+.card_header
+    background-color: #f1f1f1
+    padding: 10px 20px
+    border-bottom: 1px solid #dedede !important
+    height: 60px
+
+
+.details_box
+    background-color: #fff !important
+    padding: 0 !important
+    border: 1px solid #dedede !important
+    height: auto
+    .card_body
+        padding: 20px
+    
+
+
+// Breadcrum
+.header-tabs
+    margin-bottom: 2rem
+    padding-left: 0
+    border-bottom: 1px solid #e3ebf6
+    li
+        display: inline-block
+        a
+            text-decoration: none
+            color: #6c757d
+            padding: 0 1.5rem 1rem 1.5rem
+            display: block
+            font-weight: 500
+            position: relative
+            // overflow: hidden
+            &::after
+                position: absolute
+                content: ''
+                left: 0
+                bottom: -1px
+                width: 100%
+                height: 1px
+                background: $primary
+                display: none
+                animation: 1s size
+                @keyframes size
+                    0%
+                        width: 0px
+                    
+                    100%
+                        width: 100%
+                    
+                
+            
+        
+        a.active
+            &::after
+                display: block
+                
+            
+        
+    
+
+select
+    border-color: $primary
+    option 
+        margin: 40px
+        background: #f1f3fa
+        color:#6c757d
+        text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4)
+    
+ 
+.form-select:focus
+    outline: none
+    box-shadow: none
+
+.table 
+    color: #6c757d
+    overflow: hidden
+    width: 100%!important
+    tr 
+        border-style: none
+    
+    td,
+    th 
+        border-top: 1px solid #eef2f7
+        border-bottom: 1px solid #eef2f7
+        white-space: nowrap
+    
+    td.description
+        word-wrap: break-word!important
+        white-space: unset
+    
+    .table-light 
+        th 
+            color: #6c757d
+            background-color: #f1f3fa
+            border-color: #eef2f7
+            font-size: $font-size
+            line-height: 1.5
+            font-weight: 500
+        
+        
+    
+
+table.dataTable tbody td
+    padding: 8px .95rem  
+
+
+.action_button 
+    padding-left: 0
+    margin-bottom: 0
+    li 
+        display: inline-block
+        padding-right: 10px
+        button 
+            border: none
+            padding: 8px
+            line-height: 0
+            &:focus 
+                outline: none
+                border: none
+            
+            i 
+                font-size: 18px
+            
+        
+        .btn-blue 
+            color: #39afd1
+            background-color: rgba(57, 175, 209, 0.18)
+            &:hover 
+                color: #fff
+                background-color: rgba(57, 175, 209, 1)
+            
+        
+        .btn-yellow
+            color: #ffad00
+            background-color: rgba(255, 173, 0, 0.18)
+            &:hover 
+                color: #fff
+                background-color: rgba(255, 173, 0, 1)
+            
+        
+        .btn-orange 
+            color: #ff6700
+            background-color: rgba(255, 103, 0, 0.18)
+            &:hover 
+                color: #fff
+                background-color: rgba(255, 103, 0, 1)
+            
+        
+        .btn-red 
+            color: #ff002d
+            background-color: rgba(255, 0, 45, 0.18)
+            &:hover 
+                color: #fff
+                background-color: rgba(255, 0, 45, 1)
+            
+        
+        .btn-green 
+            color: #0e9d2b
+            background-color: rgba(14, 157, 43, 0.18)
+            &:hover 
+                color: #fff
+                background-color: rgba(14, 157, 43, 1)
+            
+        
+    
+    
+
+.form-group 
+    select.form-control
+        height: calc(2.25rem + 2px)
+        padding: .45rem 1.9rem .45rem .9rem
+        font-size: $font-size
+        font-weight: 400
+        line-height: 1.5
+        color: #6c757d
+        vertical-align: middle
+        border-radius: .25rem
+        option
+            background: #f1f3fa
+        
+    
+    
+ 
+// Datatable Style
+.dataTables_wrapper
+    .dataTables_filter
+        float: left
+        text-align: left
+        margin-bottom: 30px
+        label
+            font-size: 18px
+            font-weight: 600
+            input
+                padding: .375rem .75rem
+                font-size: 1rem
+                font-weight: 400
+                line-height: 1.5
+                color: #212529
+                background-color: #fff
+                background-clip: padding-box
+                border: 1px solid #ced4da
+                border-radius: .25rem
+                transition: border-color .15s ease-in-out,
+                box-shadow .15s ease-in-out
+                width: 300px
+                margin-left: 15px
+                &:focus
+                    outline: none
+                    box-shadow: none
+                    border-color: $primary
+                
+            
+        
+    
+    .dataTables_info
+        padding: 12px 0px
+    
+    .dataTables_paginate
+        margin-bottom: 15px
+        .paginate_button
+            color: #171717
+            background-color: #f0f2f5
+            border: 1px solid #f0f2f5
+            font-size: $font-size
+            line-height: 1.5
+            font-weight: 600
+            &:hover
+                color: #171717!important
+                text-decoration: none
+                background: #c5cdd8
+                border-color: #c5cdd8
+            
+            &.current,
+            &.current:hover 
+                color: #fff!important
+                background: $primary
+                border-color: #eef2f7                
+            
+        
+    
+
+table.dataTable thead th, table.dataTable thead td
+    padding: 0.95rem
+    border-top: 1px solid #eef2f7
+    border-bottom: 1px solid #eef2f7
+
+table.dataTable
+    border-collapse: collapse
+
+.mobile_navigation
+    position: fixed
+    left: 0
+    top: 0
+    right: 0
+    z-index: 999
+    overflow: hidden
+
+// End Datatable Style
+.swal2-styled.swal2-confirm
+    background: $primary
+    color: #fff
+
+.swal2-styled
+    &:focus
+        box-shadow: none
+    
+
+.hamburger .line
+    width: 35px
+    height: 5px
+    // background-color: #ecf0f1
+    background-color: $primary
+    display: block
+    margin: 5px auto
+    -webkit-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    display: none
+
+  
+.hamburger:hover
+    cursor: pointer
+
+/* SIX */
+
+#hamburger-6.is-active
+    -webkit-transition: all 0.3s ease-in-out
+    -o-transition: all 0.3s ease-in-out
+    transition: all 0.3s ease-in-out
+    -webkit-transition-delay: 0.6s
+    -o-transition-delay: 0.6s
+    transition-delay: 0.6s
+    -webkit-transform: rotate(45deg)
+    -ms-transform: rotate(45deg)
+    -o-transform: rotate(45deg)
+    transform: rotate(45deg)
+
+
+#hamburger-6.is-active .line:nth-child(2)
+    width: 0px
+
+
+#hamburger-6.is-active .line:nth-child(1),
+#hamburger-6.is-active .line:nth-child(3)
+    -webkit-transition-delay: 0.3s
+    -o-transition-delay: 0.3s
+    transition-delay: 0.3s
+
+
+#hamburger-6.is-active .line:nth-child(1)
+    -webkit-transform: translateY(10px)
+    -ms-transform: translateY(10px)
+    -o-transform: translateY(10px)
+    transform: translateY(10px)
+
+
+#hamburger-6.is-active .line:nth-child(3)
+    -webkit-transform: translateY(-10px) rotate(90deg)
+    -ms-transform: translateY(-10px) rotate(90deg)
+    -o-transform: translateY(-10px) rotate(90deg)
+    transform: translateY(-10px) rotate(90deg)
+
+// .modal,.show_room_modal
+//     z-index: 1000!important
+// 
+.bs-datepicker-container
+    z-index: 999999
+    .theme-green
+        .bs-datepicker-head
+            background-color: $primary
+        
+        .bs-datepicker-body
+            table
+                td
+                    span.selected
+                        background-color: $primary
+                    
+                
+                td.week
+                    span
+                        color: $primary
+                    
+                
+            
+        
+     
+
+// .modal-backdrop
+//     z-index: 999!important
+// 
+@media(max-width: 1200px)
+    .dashboard_container
+        height: 100%
+        .dashboard_body
+            .row            
+                .col_sidebar
+                    display: none
+                
+                .col_dashboard
+                    width: 100%
+                    margin-left: 0
+                    .app_body
+                        height: 100%
+                        margin-top: 87px
+                    
+                
+            
+        
+    
+
+@media (max-width:768px)
+
+    .header-tabs li a
+        padding-left: .5rem
+        padding-right: .5rem
+    
+    .dataTables_wrapper
+        .dataTables_filter
+            float: none
+            label
+                display: block
+                input
+                    width: 100%
+                    margin-left: 0
+                
+             
+         
+     
+    .main-container
+        .main-wrapper
+            .admin-sidebar
+                display: none
+                width: 100%
+                background: $primary
+                position: fixed
+                top: 0px
+                left: -1000px
+                right: 0
+                bottom: 0
+                z-index: 999
+                padding-top: 115px
+                // padding-bottom: 115px
+                overflow-y: scroll
+                height: 100%
+                -webkit-transition: all 0.3s ease-in-out
+                -o-transition: all 0.3s ease-in-out
+                transition: all 0.3s ease-in-out
+                -webkit-transition-delay: 0.6s
+                -o-transition-delay: 0.6s
+                transition-delay: 0.6s
+            
+            
+            .hamburger
+                z-index: 999999        
+            
+            .hamburger .line
+                display: block
+            
+            .admin-main
+                width: 100%
+                margin-left: 0
+            
+        
+        
+    
+    .main-container.active
+        height: 100%
+        .main-wrapper
+            .admin-sidebar                
+                display: block
+                left: 0
+                
+                animation: sideRight 0.6s
+                @keyframes sideRight
+                    0%
+                        left: -1000px
+                    
+                    100%
+                        left: 0
+                    
+                
+                .inner-dashboard
+                    display: block
+                
+                .inner-dashboard-logo
+                    // position: fixed
+                    // top: 115px
+                    // left: 0
+                    // right: 0
+                    display: none
+
+                
+                .inner-dashboard-list
+                    // padding-top: 115px
+                
+            
+            .admin-main
+                #hamburger-6.is-active
+                    .line
+                        // background: #fff
+                    
+            
+                
+            
+        
+     
+    
+
+
+.detail_view_info_section
+    .form_heading
+        margin: 10px 0
+        h5
+            margin: 0
+            color: #121212
+            font-size: 1rem
+        
+        hr
+            margin-top: .5rem
+        
+    
+
+// .notifier__container
+//     ul
+//         li
+//             .notifier__notification--default
+//                 background: #fafafa
+//                 color: #000
+//                 .notifier__notification-button-icon
+//                     fill: #000
+//                 
+//             
+//         
+//     
+// 
+// notifier__notification  notifier__notification--material
+@media (max-width: 767px) 
+    .notifier__notification--info
+        display: none
+    

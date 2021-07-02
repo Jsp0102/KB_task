@@ -1,0 +1,264 @@
+.header 
+    width: 100%
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2)
+    position: sticky
+    top: 0
+    z-index: 999
+    background: #fff
+    .heading 
+        padding-top: 30px
+        padding-left: 0
+        padding-right: 0
+        width: 100%
+        .heading-top 
+            display: flex
+            justify-content: space-between
+            align-items: center
+            // padding-right: 30px
+            // padding-left: 10px
+            .pagetitle 
+                h1 
+                    span 
+                        color: var(--primary)
+                    
+                
+            
+            .pagetext 
+                display: flex
+                align-items: center
+
+                .currentDateTime 
+                    padding-right: 30px
+
+                    h5 
+                        margin-bottom: 0
+                    
+                
+                .btn 
+                    margin-left: 15px
+                
+            
+        
+        .dropdown 
+            ul.dropdown-menu.notification_card 
+                width: 400px
+                max-height: 500px
+                margin: 0
+                overflow-y: scroll
+                li 
+                    h6.dropdown-header 
+                        font-weight: 600
+                    
+                    border-bottom: 1px solid #ccc
+                
+
+                li.notify 
+                    display: flex
+                    padding: 10px 20px
+                    &:last-child
+                        border-bottom: none
+                    
+                    .profile_img 
+                        margin-right: 10px
+                        img 
+                            width: 40px
+                        
+                    
+                    .info 
+                        h5.title 
+                            color: #242424
+                            margin: 0
+                            padding: 0
+                            font-size: 15px
+                        
+                        p 
+                            font-size: 13px
+                            margin: 0
+                            padding: 0
+                        
+                        span 
+                            font-size: 12px
+                            color: gray
+                            margin: 0
+                            padding: 0
+                        
+                    
+                
+                li.notify:hover 
+                    cursor: pointer
+                    background: #fafafa
+                
+            
+            ul.dropdown-menu.notification_card::-webkit-scrollbar 
+                width: 5px
+            
+            ul.dropdown-menu.notification_card::-webkit-scrollbar-track 
+                background: #fafafa
+            
+            ul.dropdown-menu.notification_card::-webkit-scrollbar-thumb 
+                background: gray
+            
+            ul.dropdown-menu.notification_card::-webkit-scrollbar-thumb:hover 
+                background: #121212
+            
+        
+    
+
+.show_image_modal 
+    // width: 100%
+    // height: 100vh
+    background: rgba(0, 0, 0, 0.6)
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 999999
+    display: block
+    align-items: center
+    justify-content: center
+    padding: 10px 0px
+    .content_area 
+        width: 100%
+        max-height: 90vh
+        overflow-y: scroll
+        display: grid
+        align-items: center
+        // justify-content: center
+        &::-webkit-scrollbar 
+            display: none
+        
+        .content-image 
+            position: relative
+            padding: 40px 0px
+
+            iframe 
+                width: 100%
+                height: 90vh
+                &.scroller 
+                    border-radius: 10px
+                    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3)
+                    background-color: #555
+                
+            
+        
+        img.img-fluid 
+            width: 100%
+            max-height: 100%
+            z-index: 999
+            animation: imagesize 1.5s
+            @keyframes imagesize 
+                0% 
+                    transform: scale(0)
+                
+                100% 
+                    transform: scale(1)
+                
+            
+        
+        img.zoom-in 
+            cursor: zoom-out
+            z-index: 999
+            transition: transform 1.5s ease
+            transform: scale(2.5)
+        
+        img.zoom-out 
+            cursor: zoom-in
+            z-index: 999
+            transition: transform 1.5s ease
+            transform: scale(1)
+        
+        .close_model 
+            position: absolute
+            top: 0%
+            right: 0%
+            cursor: pointer
+            z-index: 9999
+            width: 40px
+            height: 40px
+            box-shadow: -8px 8px 14px 0 rgba(25, 42, 70, 0.11)
+            text-align: center
+            background: #fff
+            i 
+                width: 100%
+                height: 100%
+                display: grid
+                align-items: center
+                color: var(--inner-primary)
+                font-size: 40px
+                font-weight: 400
+            
+        
+    
+
+@media (max-width: 1200px) 
+    .header 
+        .heading 
+            .heading-top 
+                .pagetitle 
+                    h1 
+                        font-size: 1.8rem
+                    
+                
+                .pagetext 
+                    h5 
+                        font-size: 1rem
+                    
+                    .btn 
+                        font-size: 12px
+                    
+                
+            
+        
+    
+
+
+@media (max-width: 768px) 
+    .header 
+        .heading 
+            padding-top: 15px
+            .heading-top 
+                display: block !important
+                padding-right: 0px
+                padding-left: 0px
+                .pagetitle 
+                    h1 
+                        font-size: 1.4rem
+                    
+                
+                .pagetext 
+                    margin-bottom: 15px
+                    justify-content: space-between
+                    margin-right: 15px
+                
+            
+        
+    
+
+@media (max-width: 767px) 
+    .header 
+        .heading 
+            .heading-top 
+                .pagetitle 
+                    h1 
+                        font-size: 1rem
+                    
+                
+                .pagetext 
+                    margin-right: 0
+                    h5 
+                        font-size: 0.8rem
+                    
+                    .btn 
+                        font-size: 0.5rem
+                    
+                
+            
+            .dropdown 
+                ul.dropdown-menu.notification_card 
+                    width: 300px
+                
+            
+        
+    
+

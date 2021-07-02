@@ -1,0 +1,60 @@
+@import '../../../styles'
+.inner-dashboard
+    height: 100%
+    display: grid
+    align-items: baseline
+    .inner-dashboard-logo
+        text-align: center
+        position: sticky
+        top: 0px
+        background: var(--primary)
+        padding-bottom: 5px
+        z-index: 999
+        img
+            padding-top: 30px
+            width: 80px
+        
+    
+    .inner-dashboard-list
+        ul
+            padding-left: 0
+            li
+                display: block
+                margin-top: 0.5em
+                margin-bottom: 0.5em
+                a
+                    display: block
+                    text-align: center
+                    text-decoration: none
+                    color: #fff
+                    padding-top: 0.5em    
+                    padding-bottom: 0.5em   
+                    &:focus
+                        border: none
+                        outline: none
+                    
+                    h6
+                        font-size: .8rem
+                        margin-bottom: 0
+                    
+                    i
+                        width: 50px
+                        height: 50px
+                        font-size: 30px
+                        margin-bottom: 5px
+                        display: grid
+                        align-items: center
+                        margin-left: auto
+                        margin-right: auto
+                    
+                
+                a.active
+                    i
+                        background: #8487e0
+                        border-radius: 50%
+                    // color: #000
+                    
+                
+            
+        
+    
