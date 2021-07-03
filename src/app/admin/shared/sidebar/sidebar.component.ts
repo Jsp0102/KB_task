@@ -22,7 +22,7 @@ export class SidebarComponent implements OnInit {
     {
       icon: "fa-user",
       title: "Clients",
-      route: "/admin/bid"
+      route: "/admin/clients"
     },
     {
       icon: "fa-file",

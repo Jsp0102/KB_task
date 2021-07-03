@@ -3,12 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AdminComponent } from './admin/admin.component';
-import { SidebarComponent } from './shared/sidebar/sidebar.component';
+import { ClientsComponent } from './admin/clients/clients.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { SidebarComponent } from './admin/shared/sidebar/sidebar.component';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthComponent } from './auth/auth.component';
-import { HeaderComponent } from './shared/header/header.component';
+import { DetailComponent } from './admin/clients/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -16,13 +18,15 @@ import { HeaderComponent } from './shared/header/header.component';
     AuthComponent,
     AdminComponent,
     SidebarComponent,
-    HeaderComponent,
+    DashboardComponent,
+    ClientsComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     NgbModule,
-    AppRoutingModule
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
