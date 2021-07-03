@@ -76,7 +76,7 @@
                                     <tr>
                                         <td>{{ data.id }}</td>
                                         <td>
-                                            <p [routerLink]="['/clients/',data.id]">{{ data.name }}</p>
+                                            <a href="/admin/clients/{{data.id}}">{{ data.name }}</a>
                                         </td>
                                         <td>{{ data.date | date: 'MMM d, y' }}</td>
                                         <td>{{ data.assigned_member }}</td>

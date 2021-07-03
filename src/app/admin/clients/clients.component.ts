@@ -10,7 +10,7 @@ export class ClientsComponent implements OnInit {
   date:Date = new Date;
   clients:any = [{
     id: 1,
-    name: 'Jasvender',
+    name: 'Apple',
     date: this.date,
     assigned_member: 'Prakhar Niharika Gupta'
   }]
